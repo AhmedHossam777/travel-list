@@ -30,6 +30,10 @@ const PackingList = ({ items, setItems }) => {
 		);
 	};
 
+	const handleClearList = () => {
+		setItems([]);
+	};
+
 	return (
 		<div className="list">
 			<ul>
@@ -50,6 +54,10 @@ const PackingList = ({ items, setItems }) => {
 					<option value="packed">Sort by packed status</option>
 				</select>
 			</div>
+
+			<button className="actions" onClick={handleClearList}>
+				Clear List
+			</button>
 		</div>
 	);
 };
